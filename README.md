@@ -19,3 +19,15 @@
 
 ## Credit and Collaborations
 <!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+## feture 1
+
+Name of feature: _Set up your React repository & API keys._
+
+Estimate of time needed to complete: _30 mins_
+
+Start time: _10:18 PM_
+
+Finish time: _11:18 PM_
+
+Actual time needed to complete: _1 HOUR_
