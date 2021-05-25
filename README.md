@@ -31,3 +31,39 @@ Start time: _10:18 PM_
 Finish time: _11:18 PM_
 
 Actual time needed to complete: _1 HOUR_
+
+## feture 2
+
+Name of feature: _Locations._
+
+Estimate of time needed to complete: _1 HOUR_
+
+Start time: _9:20 PM_
+
+Finish time: _10:20 PM_
+
+Actual time needed to complete: _1 HOUR_
+
+## feture 3
+
+Name of feature: _Map._
+
+Estimate of time needed to complete: _30 mins_
+
+Start time: _4:00 PM_
+
+Finish time: _4:30 PM_
+
+Actual time needed to complete: _30 mins_
+
+## feture 4
+
+Name of feature: _Errors._
+
+Estimate of time needed to complete: _15 mins_
+
+Start time: _4:30 PM_
+
+Finish time: _4:45 PM_
+
+Actual time needed to complete: _15 mins_
