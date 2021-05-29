@@ -44,8 +44,8 @@ class App extends React.Component {
       console.log('responseDataFunction', responseDataFunction.data);
       // urlRequest2 = http://localhost:3003/ahmad?desired_city=amman
       // https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=amman
-      let urlRequest2 = `${serverRoute}/ahmad?desired_city=${this.state.cityRequest}`
-      // let urlRequest2 = `https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=${this.state.cityRequest}`
+      // let urlRequest2 = `${serverRoute}/ahmad?desired_city=${this.state.cityRequest}`
+      let urlRequest2 = `https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=${this.state.cityRequest}`
       let requestToBackend = await axios.get(urlRequest2);
       console.log('requestToBackend', requestToBackend);
       this.setState(
