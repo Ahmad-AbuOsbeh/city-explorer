@@ -70,6 +70,7 @@ class App extends React.Component {
 
 
   }
+  
   // https://maps.locationiq.com/v3/staticmap?key=pk.d2f25ab9a78b95f48f540af0f9fb290e&center=31.9515694,35.9239625&zoom=5
   render() {
     return (
