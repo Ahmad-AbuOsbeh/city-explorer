@@ -39,6 +39,7 @@ class App extends React.Component {
 
 
     try {
+      
       const serverRoute=process.env.REACT_APP_SERVER;
       let responseDataFunction = await axios.get(urlRequest);
       console.log('responseDataFunction', responseDataFunction.data);
