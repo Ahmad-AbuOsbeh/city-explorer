@@ -5,7 +5,7 @@ import React from "react";
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Button, Table } from 'react-bootstrap'
-// import Table from 'react-bootstrap/Table'
+// require('dotenv').config();
 
 class App extends React.Component {
 
@@ -33,7 +33,9 @@ class App extends React.Component {
 
   sendingRequest = async (event) => {
     event.preventDefault();
-    let urlRequest = `https://eu1.locationiq.com/v1/search.php?key=pk.d2f25ab9a78b95f48f540af0f9fb290e&q=${this.state.cityRequest}&format=json`;
+    // let WHEATHER_API_KEY=process.env.WHEATHER_API_KEY;
+    let WHEATHER_API_KEY=`pk.d2f25ab9a78b95f48f540af0f9fb290e`;
+    let urlRequest = `https://eu1.locationiq.com/v1/search.php?key=${WHEATHER_API_KEY}&q=${this.state.cityRequest}&format=json`;
 
 
     try {
@@ -41,7 +43,9 @@ class App extends React.Component {
       let responseDataFunction = await axios.get(urlRequest);
       console.log('responseDataFunction', responseDataFunction.data);
       // urlRequest2 = http://localhost:3003/ahmad?desired_city=amman
+      // https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=amman
       let urlRequest2 = `${serverRoute}/ahmad?desired_city=${this.state.cityRequest}`
+      // let urlRequest2 = `https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=${this.state.cityRequest}`
       let requestToBackend = await axios.get(urlRequest2);
       console.log('requestToBackend', requestToBackend);
       this.setState(
