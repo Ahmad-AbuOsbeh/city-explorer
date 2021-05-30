@@ -39,13 +39,14 @@ class App extends React.Component {
 
 
     try {
+      
       const serverRoute=process.env.REACT_APP_SERVER;
       let responseDataFunction = await axios.get(urlRequest);
       console.log('responseDataFunction', responseDataFunction.data);
       // urlRequest2 = http://localhost:3003/ahmad?desired_city=amman
       // https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=amman
-      // let urlRequest2 = `${serverRoute}/ahmad?desired_city=${this.state.cityRequest}`
-      let urlRequest2 = `https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=${this.state.cityRequest}`
+      let urlRequest2 = `${serverRoute}/ahmad?desired_city=${this.state.cityRequest}`
+      // let urlRequest2 = `https://city-explorer-backend-server.herokuapp.com/ahmad?desired_city=${this.state.cityRequest}`
       let requestToBackend = await axios.get(urlRequest2);
       console.log('requestToBackend', requestToBackend);
       this.setState(
@@ -53,6 +54,7 @@ class App extends React.Component {
           responseData: responseDataFunction.data[0],
           responseFromBackend: requestToBackend.data,
           showResponse: true
+
 
         }
       )
@@ -73,6 +75,7 @@ class App extends React.Component {
   
   // https://maps.locationiq.com/v3/staticmap?key=pk.d2f25ab9a78b95f48f540af0f9fb290e&center=31.9515694,35.9239625&zoom=5
   render() {
+  
     return (
       <>
         <p>hello front end react app</p>
@@ -107,29 +110,30 @@ class App extends React.Component {
                   </tr>
                   </thead>
                   
-        {this.state.responseFromBackend.map((item) => {
+        {/* {this.state.responseFromBackend.map((item) => {
           
           return (
-            <>
+            <> */}
               
                
                 <tbody>
                   <tr>
                   <th>{this.state.daysCounter++}</th>
-                    <td>{item.date}</td>
-                    <td>{item.descreption}</td>
+                    <td>{this.state.responseFromBackend.date}</td>
+                    <td>{this.state.responseFromBackend.descreption}</td>
                     {/* <td>@mdo</td> */}
                   </tr>
                   
                 </tbody>
               
-            </>
+            {/* </>
           )
         })
 
         }
-        </Table>}
-
+        } */}
+        </Table>
+  }
         {this.state.showResponse && <img src={`https://maps.locationiq.com/v3/staticmap?key=pk.d2f25ab9a78b95f48f540af0f9fb290e&center=${this.state.responseData.lat},${this.state.responseData.lon}&zoom=18`} alt='' />}
         {/* <button onClick={this.sendingRequest}>Submit Request</button>
         <p>{this.state.responseData.display_name}</p> */}
